@@ -1,4 +1,4 @@
-.PHONY: clean data lint requirements
+.PHONY: clean data requirements
 
 #################################################################################
 # GLOBALS                                                                       #
@@ -30,10 +30,6 @@ data: requirements
 clean:
     find . -type f -name "*.py[co]" -delete
     find . -type d -name "__pycache__" -delete
-
-## Lint using flake8
-lint:
-    flake8 src
 
 ## Set up python interpreter environment
 create_environment:
